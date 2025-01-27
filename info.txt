@@ -1,0 +1,11 @@
+install vercel package globally:
+npm i -g vercel
+
+login to vercel command:
+vercel login
+
+create a new vercel project:
+vercel dev
+
+deploy project to vercel:
+vercel

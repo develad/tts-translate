@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="styles.css"
+    />
+    <title>TTS & Translation App</title>
+  </head>
+  <body
+    class="bg-gray-100 flex flex-col items-center justify-center h-screen gap-4"
+  >
+    <div class="bg-white shadow-md rounded-lg p-6 max-w-md w-[90%] md:w-full">
+      <h1 class="text-2xl font-semibold text-gray-800 text-center mb-4">
+        TTS & Translation
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 16 16"
+          class="inline-block h-12 w-12"
+        >
+          <path
+            fill="#111111"
+            fill-rule="evenodd"
+            d="M11 5a.75.75 0 0 1 .688.452l3.25 7.5a.75.75 0 1 1-1.376.596L12.89 12H9.109l-.67 1.548a.75.75 0 1 1-1.377-.596l3.25-7.5A.75.75 0 0 1 11 5m-1.24 5.5h2.48L11 7.636zM5 1a.75.75 0 0 1 .75.75v1.261a25 25 0 0 1 2.598.211a.75.75 0 1 1-.2 1.487q-.33-.045-.662-.08A13 13 0 0 1 5.92 8.058q.356.456.752.873a.75.75 0 0 1-1.086 1.035A13 13 0 0 1 5 9.307a13 13 0 0 1-2.841 2.546a.75.75 0 0 1-.827-1.251A11.6 11.6 0 0 0 4.08 8.057a13 13 0 0 1-.554-.938a.75.75 0 1 1 1.323-.707l.15.271c.388-.68.708-1.405.952-2.164a24 24 0 0 0-4.1.19a.75.75 0 0 1-.2-1.487q1.28-.171 2.598-.211V1.75A.75.75 0 0 1 5 1"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </h1>
+
+      <!-- Text Input  -->
+
+      <textarea
+        class="w-full h-32 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+        placeholder="Type your text here..."
+      ></textarea>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        class="h-8 w-8 mx-auto stroke-gray-300 mt-4"
+      >
+        <path
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M17 3v18m-7-3l-3 3l-3-3m3 3V3m13 3l-3-3l-3 3"
+        />
+      </svg>
+
+      <!-- Translated Text -->
+
+      <div>
+        <p class="block text-sm font-medium text-gray-700 mb-2">
+          Translated Text
+        </p>
+        <textarea
+          id="translatedBox"
+          class="w-full h-32 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+          readonly="yes"
+          placeholder="Your translated text will appear here"
+        ></textarea>
+      </div>
+
+      <!-- Language Selection  -->
+
+      <div class="mt-4">
+        <label
+          for="languageSelect"
+          class="block text-sm font-medium text-gray-700 mb-2"
+          >Select Language</label
+        >
+
+        <select
+          id="languageSelect"
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        ></select>
+      </div>
+
+      <!-- Voice Selection  -->
+
+      <div class="mt-4">
+        <label
+          for="voiceSelect"
+          class="block text-sm font-medium text-gray-700 mb-2"
+          >Select Voice</label
+        >
+
+        <select
+          id="voiceSelect"
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          <option value="default">Default Voice</option>
+          <option value="voice1">Voice1</option>
+          <option value="voice2">Voice2</option>
+        </select>
+      </div>
+
+      <!-- Play Button  -->
+
+      <button
+        class="mt-6 w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transtion-all duration-300 cursor-pointer"
+        id="playButton"
+      >
+        Translate & Play Text
+      </button>
+
+      <a
+        href="https://github.com/develad"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-gray-300 flex items-center justify-center gap-2 mt-6"
+      >
+        Elad Bar
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 64 64"
+          class="w-5 h-5 fill-gray-300 animate-bounce"
+        >
+          <path
+            d="M32 0C14 0 0 14 0 32c0 21 19 30 22 30c2 0 2-1 2-2v-5c-7 2-10-2-11-5c0 0 0-1-2-3c-1-1-5-3-1-3c3 0 5 4 5 4c3 4 7 3 9 2c0-2 2-4 2-4c-8-1-14-4-14-15q0-6 3-9s-2-4 0-9c0 0 5 0 9 4c3-2 13-2 16 0c4-4 9-4 9-4c2 7 0 9 0 9q3 3 3 9c0 11-7 14-14 15c1 1 2 3 2 6v8c0 1 0 2 2 2c3 0 22-9 22-30C64 14 50 0 32 0"
+          />
+        </svg>
+        2025
+      </a>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
