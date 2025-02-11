@@ -1,3 +1,97 @@
 body {
   font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #dddddd;
+  color: #1a202c;
+}
+
+body.dark {
+  background-color: #1a202c;
+  color: #cbd5e0;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+body.dark .bg-white {
+  background-color: #2d3748;
+}
+
+body.dark .text-gray-800 {
+  color: white;
+  fill: white;
+}
+body.dark .text-gray-700 {
+  color: #cbd5e0;
+}
+body.dark textarea {
+  color: white;
+  background-color: #2d3748;
+  color: #cbd5e0;
+  border-color: #4a5568;
+}
+
+body.dark textarea:focus {
+  border-color: #4299e1;
+  --tw-ring-color: #4299e1;
+}
+
+body.dark textarea::placeholder {
+  color: #718096;
+}
+
+body.dark select {
+  background-color: #2d3748;
+  color: #cbd5e0;
+}
+
+body.dark select option {
+  background-color: #2d3748;
+  color: #cbd5e0;
+}
+
+.border-gray-300 {
+  border-color: #d1d5db;
+}
+
+body.dark .border-gray-300 {
+  border-color: #4a5568;
+}
+
+.focus\:ring-blue-500 {
+  --tw-ring-color: #3b82f6;
+}
+
+body.dark .focus\:ring-blue-500 {
+  --tw-ring-color: #63b3ed;
+}
+
+.bg-blue-500 {
+  background-color: #3b82f6;
+}
+
+body.dark .bg-blue-500 {
+  background-color: #3182ce;
+}
+
+.hover\:bg-blue-600:hover {
+  background-color: #2563eb;
+}
+
+body.dark .hover\:bg-blue-600:hover {
+  background-color: #2b6cb0;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  fill: #1a202c;
+}
+
+body.dark .theme-toggle {
+  fill: #cbd5e0;
 }
